@@ -1,45 +1,62 @@
 package prog2.model;
 
-public class Allotjament implements InAllotjament {
+public abstract class Allotjament implements InAllotjament {
 
     private String nom_;
-    private int identificador;
-    private int tempsEstadaMin;
+    private String identificador_;
+    private long estadaMinimaALTA_;
+    private long estadaMinimaBAIXA_;
 
+    public Allotjament(String nom_, String identificador_) {
+        this.nom_ = nom_;
+        this.identificador_ = identificador_;
+    }
 
+    public Allotjament(String nom_, String identificador_, long estadaMinimaALTA_, long estadaMinimaBAIXA_) {
+        this.nom_ = nom_;
+        this.identificador_ = identificador_;
+        this.estadaMinimaALTA_ = estadaMinimaALTA_;
+        this.estadaMinimaBAIXA_ = estadaMinimaBAIXA_;
+    }
 
     @Override
     public String getNom() {
-        return "";
+        return nom_;
     }
 
     @Override
     public void setNom(String nom) {
-
+        this.nom_ = nom;
     }
 
     @Override
     public String getId() {
-        return "";
+        return identificador_;
     }
 
     @Override
     public void setId(String id) {
-
+        this.identificador_ = id;
     }
 
     @Override
     public long getEstadaMinima(Temp temp) {
-        return 0;
+        if (temp == Temp.ALTA) {
+            return estadaMinimaALTA_;
+        } else {
+            return estadaMinimaBAIXA_;
+        }
     }
 
     @Override
     public void setEstadaMinima(long estadaMinimaALTA_, long estadaMinimaBAIXA_) {
-
+        this.estadaMinimaALTA_ = estadaMinimaALTA_;
+        this.estadaMinimaBAIXA_ = estadaMinimaBAIXA_;
     }
 
     @Override
-    public boolean correcteFuncionament() {
-        return false;
-    }
+    public abstract boolean correcteFuncionament();
+
 }
+
+
