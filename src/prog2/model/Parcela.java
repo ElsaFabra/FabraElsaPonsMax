@@ -42,6 +42,6 @@ public class Parcela extends Allotjament {
     }
 
     public String toString(){
-        return super.toString() + " Parcela -> mida = " + mida_ + ", connexio electrica = " + connexioElectrica_ ;
+        return super.toString() + " Parcela(mida = " + mida_ + ", connexio electrica = " + connexioElectrica_ + ")";
     }
 }
