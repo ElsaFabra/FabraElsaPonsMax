@@ -7,14 +7,10 @@ public class Client implements InClient {
     private String nom_;
     private String dni_;
 
-    public Client() {
-    }
-
     public Client(String nom_, String dni_){
         this.nom_ = nom_;
         this.dni_ = dni_;
     }
-
 
     @Override
     public String getNom() {

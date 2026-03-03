@@ -57,21 +57,10 @@ public abstract class Allotjament implements InAllotjament {
     @Override
     public abstract boolean correcteFuncionament();
 
-
-    public static InAllotjament.Temp getTemporada(LocalDate data){
-        int mes = data.getMonthValue();
-        int dia = data.getDayOfMonth();
-        if(mes > 3 && mes < 9 || mes == 3 && dia >= 21 || mes == 9 && dia <= 20 ){
-            return InAllotjament.Temp.ALTA;
-        } else {
-            return InAllotjament.Temp.BAIXA;
-        }
-    }
-
     @Override
     public String toString(){
         return "Nom = " + nom_ + ", Id = " + identificador_ +
-                ", estada mínima en temporada alta és " + estadaMinimaALTA_ +
-                ", estada mínima en temporada baixa és " + estadaMinimaBAIXA_ + ".";
+                ", estada mínima en temp ALTA: " + estadaMinimaALTA_ +
+                ", estada mínima en temp BAIXA: " + estadaMinimaBAIXA_ + ".";
     }
 }

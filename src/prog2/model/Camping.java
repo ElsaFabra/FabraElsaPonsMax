@@ -19,8 +19,14 @@ public class Camping implements InCamping {
         this.llistaReserves_ = new LlistaReserves();
     }
 
-    public static InAllotjament.Temp getTemporada(LocalDate data) {
-        return Allotjament.getTemporada(data);
+    public static InAllotjament.Temp getTemporada(LocalDate data){
+        int mes = data.getMonthValue();
+        int dia = data.getDayOfMonth();
+        if(mes > 3 && mes < 9 || mes == 3 && dia >= 21 || mes == 9 && dia <= 20 ){
+            return InAllotjament.Temp.ALTA;
+        } else {
+            return InAllotjament.Temp.BAIXA;
+        }
     }
 
     public Allotjament buscarAllotjament(String id){
@@ -51,8 +57,8 @@ public class Camping implements InCamping {
     }
 
     @Override
-    public prog2.model.LocalDate getLlistaReserves() {
-        return null;
+    public LlistaReserves getLlistaReserves() {
+        return llistaReserves_;
     }
 
     @Override
@@ -107,7 +113,7 @@ public class Camping implements InCamping {
     @Override
     public void afegirGlamping(String nom_, String idAllotjament_, String mida, int habitacions, int placesPersones, String material, boolean casaMascota) {
         Glamping gp = new Glamping(nom_, idAllotjament_, mida, habitacions, placesPersones, material, casaMascota);
-        llistaAllotjaments_.add(g);
+        llistaAllotjaments_.add(gp);
     }
 
     @Override
@@ -131,7 +137,7 @@ public class Camping implements InCamping {
                 throw new ExcepcioReserva("No existeix el client amb dni = " + dni_);
             }
 
-            llistaReserves_afegirReserva(allotjament, client, dataEntrada, dataSortida);
+            llistaReserves_.afegirReserva(allotjament, client, dataEntrada, dataSortida);
     }
 
     @Override

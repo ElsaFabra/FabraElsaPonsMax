@@ -5,15 +5,15 @@ import java.util.*;
 import java.time.LocalDate;
 
 public class LlistaReserves implements InLlistaReserves {
-
     private ArrayList<Reserva> llistaReserves;
 
     public LlistaReserves (){
-        // = new ArrayList<Reserva>();
+
     }
 
     @Override
-    public void afegirReserva(Allotjament allotjament, Client client, LocalDate dataEntrada, LocalDate dataSortida) throws ExcepcioReserva {
+    public void afegirReserva(Allotjament allotjament, Client client, LocalDate dataEntrada, LocalDate dataSortida)
+            throws ExcepcioReserva {
 
     }
 
@@ -22,7 +22,7 @@ public class LlistaReserves implements InLlistaReserves {
         return 0;
     }
 
-    public void allotjamentDisponible(Allotjament allotjament, LocalDate dataEntrada, LocalDate dataSortida){
+    public boolean allotjamentDisponible(Allotjament allotjament, LocalDate dataEntrada, LocalDate dataSortida){
 
     }
 }
