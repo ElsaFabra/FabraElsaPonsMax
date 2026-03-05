@@ -5,15 +5,19 @@ import java.util.*;
 import java.time.LocalDate;
 
 public class LlistaReserves implements InLlistaReserves {
-    private ArrayList<Reserva> llistaReserves;
+    private ArrayList<Reserva>llistaReserves;
+    private Reserva reserva;
 
     public LlistaReserves (){
-
+        this.llistaReserves = new ArrayList<Reserva>();
     }
 
     @Override
     public void afegirReserva(Allotjament allotjament, Client client, LocalDate dataEntrada, LocalDate dataSortida)
             throws ExcepcioReserva {
+        if (!allotjamentDisponible(allotjament, dataEntrada, dataSortida)) {
+            throw new ExcepcioReserva("L'allotjament " + allotjament.getId() + " no està disponible a " + dataEntrada + " per " + client.getNom() + " amb DNI: " + client.getDni());
+        }
 
     }
 
@@ -23,6 +27,7 @@ public class LlistaReserves implements InLlistaReserves {
     }
 
     public boolean allotjamentDisponible(Allotjament allotjament, LocalDate dataEntrada, LocalDate dataSortida){
-
+        //afeguir la lògica
+        return true;
     }
 }
