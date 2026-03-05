@@ -1,5 +1,8 @@
 package prog2.vista;
+import prog2.model.Allotjament;
 import prog2.model.Camping;
+import prog2.model.InAllotjament;
+
 import java.util.*;
 
 
@@ -20,16 +23,18 @@ public class GestorCamping {
         
         ferReserves(campingMar);
 
-
         // Mostrar el número total d'allotjaments del Càmping i el número d'allotjaments que estan operatius amb el següent missatge:
         // >> El número total d'allotjaments del Càmping és X dels quals X allotjaments estan operatius.
-        //--------------------------------------------------------------------------------------------------
-        // Per completar
+        System.out.println("El número total d'allotjaments del Càmping és " + campingMar.getNumAllotjaments() + " dels quals " +
+                campingMar.calculAllotjamentsOperatius() + " allotjaments estan operatius.");
 
         // Mostrar l'allotjament amb estada mínima de la temporada alta més curta amb el següent missatge:
         // >> L'allotjament amb estada mínima de la temporada alta més curta és el següent:
-        //--------------------------------------------------------------------------------------------------
-        // Per completar
+        Allotjament allotjamentEstadaMesCurta = campingMar.getAllotjamentEstadaMesCurta(InAllotjament.Temp.ALTA);
+        System.out.println("L'allotjament amb estada mínima de la temporada alta més curta és el següent:");
+        if (allotjamentEstadaMesCurta != null){
+            System.out.println(allotjamentEstadaMesCurta);
+        }
        
     }
 
