@@ -5,12 +5,12 @@ import java.util.*;
 import java.time.LocalDate;
 
 public class LlistaReserves implements InLlistaReserves {
-    private ArrayList<Reserva> llistaReserves;
+    private ArrayList<Reserva>llistaReserves;
+    private Reserva reserva;
 
     public LlistaReserves (){
         this.llistaReserves = new ArrayList<Reserva>();
     }
-
 
     @Override
     public void afegirReserva(Allotjament allotjament, Client client, LocalDate dataEntrada, LocalDate dataSortida)
@@ -27,7 +27,7 @@ public class LlistaReserves implements InLlistaReserves {
     }
 
     public boolean allotjamentDisponible(Allotjament allotjament, LocalDate dataEntrada, LocalDate dataSortida){
-    //afegir la lògica
+        //afeguir la lògica
         return true;
     }
 }
