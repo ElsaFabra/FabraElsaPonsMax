@@ -1,6 +1,5 @@
 package prog2.model;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 import prog2.vista.ExcepcioReserva;
@@ -21,7 +20,7 @@ public interface InCamping {
      * Retorna la llista de reserves del camping.
      * @return
      */
-    LocalDate getLlistaReserves();
+    LlistaReserves getLlistaReserves();
 
     /**
      * Retorna la llista d'allotjaments del camping.

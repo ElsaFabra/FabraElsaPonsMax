@@ -80,34 +80,22 @@ public class Camping implements InCamping {
     }
 
     @Override
-    public LocalDate getLlistaReserves() {
-        return null;
-    }
+    public LlistaReserves getLlistaReserves() { return llistaReserves_;}
 
     @Override
-    public ArrayList<Allotjament> getLlistaAllotjaments() {
-        return llistaAllotjaments_;
-    }
+    public ArrayList<Allotjament> getLlistaAllotjaments() {return llistaAllotjaments_;}
 
     @Override
-    public ArrayList<Client> getLlistaClients() {
-        return llistaClients_;
-    }
+    public ArrayList<Client> getLlistaClients() {return llistaClients_;}
 
     @Override
-    public int getNumAllotjaments() {
-        return llistaAllotjaments_.size();
-    }
+    public int getNumAllotjaments() {return llistaAllotjaments_.size();}
 
     @Override
-    public int getNumReserves() {
-        return llistaReserves_.getNumReserves();
-    }
+    public int getNumReserves() {return llistaReserves_.getNumReserves();}
 
     @Override
-    public int getNumClients() {
-        return llistaClients_.size();
-    }
+    public int getNumClients() {return llistaClients_.size();}
 
     /** Els mètodes afegir afegeixen cada tipus d'allotjament, cada client
      * i cada reserva a la seva llista corresponent.
