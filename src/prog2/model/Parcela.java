@@ -6,10 +6,9 @@ public class Parcela extends Allotjament {
     private boolean connexioElectrica_;
 
     public Parcela(String nom_, String idAllotjament_, float metres, boolean connexioElectrica) {
-        super(nom_, idAllotjament_);
-        this.mida_ = metres;
-        this.connexioElectrica_ = connexioElectrica;
-        setEstadaMinima(4,2);
+        super(nom_, idAllotjament_, 4, 2);
+        setMida(metres);
+        setConnexioElectrica(connexioElectrica);
     }
 
     public float getMida() {

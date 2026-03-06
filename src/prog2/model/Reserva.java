@@ -9,11 +9,11 @@ public class Reserva implements InReserva {
     private LocalDate dataEntrada_;
     private LocalDate dataSortida_;
 
-    public Reserva (Allotjament allotjament_, Client client_, LocalDate dataEntrada_, LocalDate dataSortida_){
-        this.allotjament_ = allotjament_;
-        this.client_ = client_;
-        this.dataEntrada_ = dataEntrada_;
-        this.dataSortida_ = dataSortida_;
+    public Reserva (Allotjament allotjament, Client client, LocalDate dataEntrada, LocalDate dataSortida){
+        setAllotjament_(allotjament);
+        setClient(client);
+        setDataEntrada(dataEntrada);
+        setDataSortida(dataSortida);
     }
 
     @Override

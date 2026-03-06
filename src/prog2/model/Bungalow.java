@@ -8,12 +8,11 @@ public class Bungalow extends Casa{
     private boolean aireFred_;
 
     public Bungalow(String nom_, String idAllotjament_, String mida, int habitacions, int placesPersones, int placesParquing, boolean terrassa, boolean tv, boolean aireFred){
-        super(nom_, idAllotjament_, mida, habitacions, placesPersones);
-        this.placesParquing_ = placesParquing;
-        this.terrassa_ = terrassa;
-        this.tv_ = tv;
-        this.aireFred_ = aireFred;
-        setEstadaMinima(7, 4);
+        super(nom_, idAllotjament_, mida, habitacions, placesPersones, 7, 4);
+        setPlacesParquing_(placesParquing);
+        setTerrassa_(terrassa);
+        setTv_(tv);
+        setTerrassa_(aireFred);
     }
 
     public int getPlacesParquing_() {

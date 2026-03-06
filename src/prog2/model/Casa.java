@@ -5,11 +5,11 @@ public abstract class Casa extends Allotjament{
     private int habitacions_;
     private int placesPersones_;
 
-    public Casa(String nom_, String idAllotjament_, String mida, int habitacions, int placesPersones) {
-        super(nom_, idAllotjament_);
-        this.mida_ = mida;
-        this.habitacions_ = habitacions;
-        this.placesPersones_ = placesPersones;
+    public Casa(String nom_, String idAllotjament_, String mida, int habitacions, int placesPersones, long estadaMinimaALTA_, long estadaMinimaBAIXA_) {
+        super(nom_, idAllotjament_, estadaMinimaALTA_, estadaMinimaBAIXA_);
+        setMida_(mida);
+        setHabitacions_(habitacions);
+        setHabitacions_(placesPersones);
     }
 
     public String getMida_() {

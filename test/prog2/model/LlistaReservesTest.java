@@ -7,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import prog2.vista.ExcepcioReserva;
 
+import java.time.LocalDate;
+
 public class LlistaReservesTest {
 
     private LocalDate llistaReserves;

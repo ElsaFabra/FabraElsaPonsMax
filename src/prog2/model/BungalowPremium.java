@@ -11,11 +11,9 @@ public class BungalowPremium extends Bungalow{
                            boolean terrassa, boolean tv, boolean aireFred,
                            boolean serveisExtra, String codiWifi){
         super(nom_, idAllotjament_, mida, habitacions, placesPersones, placesParquing, terrassa, tv, aireFred);
-        this.serveisExtra_ = serveisExtra;
-        this.codiWifi_ = codiWifi;
-        setEstadaMinima(4,7);
+        setServeisExtra_(serveisExtra);
+        setCodiWifi_(codiWifi);
     }
-
     public boolean isServeisExtra_() {
         return serveisExtra_;
     }

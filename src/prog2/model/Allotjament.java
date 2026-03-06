@@ -1,22 +1,20 @@
 package prog2.model;
 
+
+/** Definició de la classe que representa
+ * els allotjaments. Queda definida per la seva interfície InAllotjament.
+ * **/
 public abstract class Allotjament implements InAllotjament {
-
-    private String nom_;
-    private String identificador_;
-    private long estadaMinimaALTA_;
-    private long estadaMinimaBAIXA_;
-
-    public Allotjament(String nom_, String identificador_) {
-        this.nom_ = nom_;
-        this.identificador_ = identificador_;
-    }
+    //Declaració dels atributs
+    private String nom_; //Nom de l'allotjament
+    private String identificador_; //Nom de l'identificador de l'allotjament
+    private long estadaMinimaALTA_; // Estada minima a l'allotjament en temporada alta
+    private long estadaMinimaBAIXA_; // Estada minima a l'allotjament en temporada baixa
 
     public Allotjament(String nom_, String identificador_, long estadaMinimaALTA_, long estadaMinimaBAIXA_) {
-        this.nom_ = nom_;
-        this.identificador_ = identificador_;
-        this.estadaMinimaALTA_ = estadaMinimaALTA_;
-        this.estadaMinimaBAIXA_ = estadaMinimaBAIXA_;
+        setNom(nom_);
+        setId(identificador_);
+        setEstadaMinima(estadaMinimaALTA_, estadaMinimaBAIXA_);
     }
 
     @Override
