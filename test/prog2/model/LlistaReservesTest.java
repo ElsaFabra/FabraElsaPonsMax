@@ -7,11 +7,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import prog2.vista.ExcepcioReserva;
 
-import java.time.LocalDate;
-
 public class LlistaReservesTest {
 
-    private LocalDate llistaReserves;
+    private LlistaReserves llistaReserves;
     private Allotjament allotjament;
     private Client client;
     private java.time.LocalDate dataEntrada;
@@ -20,7 +18,7 @@ public class LlistaReservesTest {
     @BeforeEach
     public void setUp() {
         // Inicialització dels objectes necessaris abans de cada prova
-        llistaReserves = new LocalDate();
+        llistaReserves = new LlistaReserves();
         allotjament = new Parcela("Parcela A", "P001", 50.0f, true);
         client = new Client("Client1", "123456789");
         dataEntrada = java.time.LocalDate.of(2026, 5, 15);
