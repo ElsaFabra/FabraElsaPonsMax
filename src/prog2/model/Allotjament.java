@@ -62,7 +62,7 @@ public abstract class Allotjament implements InAllotjament {
     //Mètode toString que retorna amb un string totes les dades d'aquesta classe
     @Override
     public String toString(){
-        return "Nom = " + nom_ + ", Id = " + identificador_ +
+        return "Nom=" + nom_ + ", Id=" + identificador_ +
                 ", estada mínima en temp ALTA: " + estadaMinimaALTA_ +
                 ", estada mínima en temp BAIXA: " + estadaMinimaBAIXA_ + ".";
     }

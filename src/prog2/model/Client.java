@@ -31,6 +31,6 @@ public class Client implements InClient {
     //Mètode toString que retorna amb un string totes les dades d'aquesta classe
     @Override
     public String toString(){
-        return nom_ + " que té DNI: " + dni_ + ". ";
+        return nom_ + " amb DNI: " + dni_ + ". ";
     }
 }

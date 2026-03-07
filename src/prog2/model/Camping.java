@@ -149,10 +149,10 @@ public class Camping implements InCamping {
 
             //Si no es troba l'allotjament el client, llançar excepció
             if (allotjament == null) {
-                throw new ExcepcioReserva("No existeix l'allotjament amb id = " + id_);
+                throw new ExcepcioReserva("L'allotjament amb id " + id_ + " no existeix");
             }
             if (client == null) {
-                throw new ExcepcioReserva("No existeix el client amb dni = " + dni_);
+                throw new ExcepcioReserva("El client amb DNI " + dni_ + " no existeix");
             }
 
             llistaReserves_.afegirReserva(allotjament, client, dataEntrada, dataSortida);
