@@ -18,7 +18,8 @@ public abstract class Casa extends Allotjament{
         //Com cada tipus de casa té estades minimes diferents, aquí no l'inicialitzo amb cao valor
         setMida_(mida);
         setHabitacions_(habitacions);
-        setHabitacions_(placesPersones);
+        setPlacesPersones_(placesPersones);
+
     }
 
     //Setters i getters per accedir als atributs privats
@@ -37,6 +38,6 @@ public abstract class Casa extends Allotjament{
     //Mètode toString que retorna amb un string totes les dades d'aquesta classe
     @Override
     public String toString() {
-        return super.toString() + ", mida =" + mida_ + ", habitacions =" + habitacions_ + ", places de persones =" + placesPersones_;
+        return super.toString() + " Mida = " + mida_ + ", habitacions = " + habitacions_ + ", places de persones = " + placesPersones_;
     }
 }

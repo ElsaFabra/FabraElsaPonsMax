@@ -20,7 +20,7 @@ public class Bungalow extends Casa{
         setPlacesParquing_(placesParquing);
         setTerrassa_(terrassa);
         setTv_(tv);
-        setTerrassa_(aireFred);
+        setAireFred_(aireFred);
     }
 
     //Setters i getters per accedir als atributs privats

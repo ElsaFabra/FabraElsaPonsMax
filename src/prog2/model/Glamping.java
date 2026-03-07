@@ -38,6 +38,6 @@ public class Glamping extends Casa{
     //Mètode toString que retorna amb un string totes les dades d'aquesta classe
     @Override
     public String toString(){
-        return super.toString() + ". Glamping(material  = " + material_ + ", casa de mascotes = " + casaMascota_ + ")";
+        return super.toString() + ". Glamping(material = " + material_ + ", casa de mascotes = " + casaMascota_ + ")";
     }
 }
