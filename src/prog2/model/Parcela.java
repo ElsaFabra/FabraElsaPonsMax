@@ -9,7 +9,7 @@ public class Parcela extends Allotjament {
     private float mida_; //Mida de la parcela
     private boolean connexioElectrica_; //Boolean true si hi ha connexió elèctrica
 
-    /** Constructor de la subclasse Parcela, als paràmetres passen els
+    /** Constructor de la classe Parcela, als paràmetres passen els
      * atributs d'Allotjament que s'inicialitzen fent ús del super, i
      * després aprofito els setters per inicialitzar els altres
      * atributs de Parcela **/
@@ -52,7 +52,7 @@ public class Parcela extends Allotjament {
         //Retornarà true si funciona perquè només funciona si existeix connexió elèctrica
     }
 
-    //Mètode toString que retorna amb un string totes les dades d'aquesta subclasse
+    //Mètode toString que retorna amb un string totes les dades d'aquesta classe
     public String toString(){
         return super.toString() + " Parcela(mida = " + mida_ + ", connexio electrica = " + connexioElectrica_ + ")";
     }

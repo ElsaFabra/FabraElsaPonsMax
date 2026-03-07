@@ -1,14 +1,14 @@
 package prog2.model;
 
-/** Definició de la subclasse de casa que representa
- * els Bungalows Premium. Té herència de Bungalow que té herència de casa.
+/** Definició de la subclasse de Casa que representa
+ * els Bungalows Premium. Té herència de Bungalow que té herència de Casa.
  * **/
 public class BungalowPremium extends Bungalow{
     //Declaració dels atributs privats de Bungalow Premium
     private boolean serveisExtra_; //Boolean true si hi ha serveis extra
     private String codiWifi_; //Codi Wifi
 
-    /** Constructor de la subclasse Bungalow Premium, als paràmetres passen els
+    /** Constructor de la classe Bungalow Premium, als paràmetres passen els
      * atributs de casa que s'inicialitzen fent ús del super, i
      * després aprofito els setters per inicialitzar els altres
      * atributs de BungalowPremium **/
@@ -47,7 +47,7 @@ public class BungalowPremium extends Bungalow{
         //Retornarà true (funcionarà) si hi ha aire fred i codi wifi, i si el codi wifi té entre 8 i 16 caràcters
     }
 
-    //Mètode toString que retorna amb un string totes les dades d'aquesta subclasse
+    //Mètode toString que retorna amb un string totes les dades d'aquesta classe
     @Override
     public String toString(){
         return super.toString() + ". Bungalow Premium(serveis extra = " + serveisExtra_ + ", codi wifi = " + codiWifi_ + ")";
